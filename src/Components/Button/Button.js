@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import cn from "classnames";
+import "./style.css";
 
 export default class Button extends React.Component {
   render() {
@@ -8,8 +9,13 @@ export default class Button extends React.Component {
 
     const btnClass = cn("btn", {
       "btn-pressed": isPressed,
-      "btn-hovered": !isPressed && isHovered,
+      "btn-over": !isPressed && isHovered,
     });
+
     return <button className={btnClass}>{label}</button>;
   }
 }
+
+Button.defaultProps = {
+  label: "Empty button",
+};

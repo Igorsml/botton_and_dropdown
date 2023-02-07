@@ -1,0 +1,17 @@
+.dropdown {
+  border: 0;
+  cursor: pointer;
+  max-width: 252px;
+  width: 100%;
+  min-height: 16px;
+  height: 100%;
+  padding: 5px 0;
+  background-color: #fff;
+  color: #0F1416;
+  transition: background-color .2s liner;
+}
+
+.dropdown-value option:hover {
+  box-shadow: 0 0 10px 100px orange inset;
+  /* background-color: #434A54; */
+}
