@@ -5,20 +5,10 @@ import Dropdown from "./Components/dropdown";
 function App() {
   return (
     <header className="App-header">
-      <Button label={"Vsesoki"} />
+      <Button label={"Vsesoki"} isPressed />
       <Dropdown />
     </header>
   );
 }
 
 export default App;
-
-/*
-нужно просто инпут с выпадахой
-
-у тебя состояние isOpen true/false и все по логике. верстка еще
-
-выбор итема на клик
-
-еще состояние selectedItemId: string | undefined
-*/

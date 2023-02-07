@@ -8,29 +8,62 @@ export default class Dropdown extends React.Component {
     super(props);
     this.state = { value: "" };
     this.isOpen = false;
+    this.isClicked = false;
   }
-  handleChange = () => this;
+
+  handleChange = () => {
+    this.isOpen = true;
+    console.log(this.isOpen);
+  };
+
+  handlePick = () => {
+    this.isClicked = true;
+    console.log("clicked");
+  };
 
   render() {
-    const dropdownClass = "dropdown";
+    let dropdownClass = "dropdown";
     const dropdownClassValue = "dropdown-value";
+
+    if (this.isClicked) {
+      dropdownClassValue = "dropdown-bg";
+    } else {
+    }
+
     return (
-      <select
-        onChange={this.handleChange}
-        className={dropdownClass}
-        onFocus={(this.size = 4)}
-        onBlur={(this.size = 0)}
-      >
-        <option className={dropdownClassValue} value="Dog">
+      <select onClick={this.handleChange} className={dropdownClass}>
+        <option
+          onClick={this.handlePick}
+          className={dropdownClassValue}
+          value="Dog"
+        >
           Dog
         </option>
-        <option className={dropdownClassValue} value="Cat">
+        <option
+          onClick={this.handlePick}
+          className={dropdownClassValue}
+          value="Cat"
+        >
           Cat
         </option>
-        <option className={dropdownClassValue} value="Frontender">
+        <option
+          onClick={this.handlePick}
+          className={dropdownClassValue}
+          value="Frontender"
+        >
           Frontender
         </option>
       </select>
     );
   }
 }
+
+/*
+нужно просто инпут с выпадахой
+
+у тебя состояние isOpen true/false и все по логике. верстка еще
+
+выбор итема на клик
+
+еще состояние selectedItemId: string | undefined
+*/

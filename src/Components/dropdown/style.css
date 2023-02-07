@@ -12,6 +12,5 @@
 }
 
 .dropdown-value option:hover {
-  box-shadow: 0 0 10px 100px orange inset;
-  /* background-color: #434A54; */
+  background-color: #434A54;
 }
