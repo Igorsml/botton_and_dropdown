@@ -14,11 +14,21 @@
   line-height: 20px;
 }
 
-.btn:hover {
+.btn-pressed {
+  background-color: #003D5E;
+}
+
+.btn-hovered {
   background-color: #004F79;
   transition: background-color .2s linear;
 }
 
-.btn:active {
+/* 
+.btn:hover {
+  background-color: #004F79;
+  transition: background-color .2s linear;
+} */
+
+/* .btn:active {
   background-color: #003D5E;
-}
+} */

@@ -2,12 +2,11 @@ body {
 	padding: 0%;
 	margin: 0%;
 	font-family: 'Inter', sans-serif;
-	background-color: rgb(246, 246, 246);
+  background-color: #282c34;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;

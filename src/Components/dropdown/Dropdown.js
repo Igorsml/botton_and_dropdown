@@ -1,6 +1,6 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
-import cn from "classnames";
+import Select from "react-select";
+import options from "./options";
 import "./style.css";
 
 export default class Dropdown extends React.Component {
@@ -22,39 +22,11 @@ export default class Dropdown extends React.Component {
   };
 
   render() {
-    let dropdownClass = "dropdown";
-    const dropdownClassValue = "dropdown-value";
-
-    if (this.isClicked) {
-      dropdownClassValue = "dropdown-bg";
-    } else {
-    }
-
-    return (
-      <select onClick={this.handleChange} className={dropdownClass}>
-        <option
-          onClick={this.handlePick}
-          className={dropdownClassValue}
-          value="Dog"
-        >
-          Dog
-        </option>
-        <option
-          onClick={this.handlePick}
-          className={dropdownClassValue}
-          value="Cat"
-        >
-          Cat
-        </option>
-        <option
-          onClick={this.handlePick}
-          className={dropdownClassValue}
-          value="Frontender"
-        >
-          Frontender
-        </option>
-      </select>
+    const MyComponent = () => (
+      <Select options={options} className={"dropdown"} />
     );
+
+    return <MyComponent />;
   }
 }
 
@@ -67,3 +39,25 @@ export default class Dropdown extends React.Component {
 
 еще состояние selectedItemId: string | undefined
 */
+
+/* {<option
+onClick={this.handlePick}
+className={dropdownClassValue}
+value="Dog"
+>
+Dog
+</option>
+<option
+onClick={this.handlePick}
+className={dropdownClassValue}
+value="Cat"
+>
+Cat
+</option>
+<option
+onClick={this.handlePick}
+className={dropdownClassValue}
+value="Frontender"
+>
+Frontender
+</option> }*/
