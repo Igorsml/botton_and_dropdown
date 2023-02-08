@@ -15,6 +15,6 @@
   background-color: red;
 }
 
-.dropdown-bg option:hover {
+.dropdown-bg option:selected {
   box-shadow: 0 0 10px 100px orange inset;
 }
