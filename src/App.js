@@ -9,7 +9,7 @@ function App() {
       <h2>Button:</h2>
       <Button />
       <h2>PureDropdown:</h2>
-      <PureDropdown />
+      <PureDropdown label="Placeholder" />
       <h2>Dropdown:</h2>
       <Dropdown />
     </header>

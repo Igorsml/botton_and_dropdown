@@ -8,3 +8,11 @@
   color: #0F1416;
   transition: background-color .2s liner;
 }
+
+.color-red {
+  background-color: red;
+}
+
+.color-green {
+  background-color: green;
+}
