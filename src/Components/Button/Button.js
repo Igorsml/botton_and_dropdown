@@ -1,5 +1,4 @@
 import React from "react";
-import classNames from "classnames";
 import "./style.css";
 
 export default class Button extends React.Component {
@@ -22,8 +21,6 @@ export default class Button extends React.Component {
       <button
         onClick={this.handleHover}
         className={`btn ${hoverClass} ${clickClass}`}
-        onMouseEnter={this.handleHover}
-        onMouseLeave={this.handleHover}
       >
         Vsesoki
       </button>

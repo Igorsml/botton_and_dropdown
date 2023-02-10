@@ -1,12 +1,11 @@
 import React from "react";
 import "./style.css";
 import Icon from "./Icon";
-import options from "./options";
 
 export default class PureDropdown extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { isClicked: false };
+    this.state = { isOpen: false, selectedItemId: 1 };
   }
 
   toggleClass = () => {
@@ -16,28 +15,16 @@ export default class PureDropdown extends React.Component {
   };
 
   render() {
-    const { label } = this.props;
-    console.log(this.state.isClicked);
-
     return (
       <div className="dropdown-container">
         <div className="dropdown-input">
           <div className="dropdown-selected-value">
-            {label}
+            {!this.state.selectedItemId
+              ? "Placeholder..."
+              : this.props.options.find(
+                  (elem) => elem.id === this.state.selectedItemId
+                ).label}
             <Icon />
-          </div>
-          <div>
-            {options.map((option) => {
-              return (
-                <option
-                  key={option.id}
-                  className={this.state.isClicked ? "active-color" : null}
-                  onClick={this.toggleClass}
-                >
-                  {option.value}
-                </option>
-              );
-            })}
           </div>
         </div>
       </div>
